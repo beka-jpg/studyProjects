@@ -66,11 +66,11 @@ class Company:
             return
 
         if self.find_by_email(employee.email):
-            print("❌ Email уже используется")
+            print("Email уже используется")
             return
 
         self.employees.append(employee)
-        print("👤 Сотрудник добавлен")
+        print("Сотрудник добавлен")
 
     def show_employees(self):
         if not self.employees:
@@ -112,7 +112,7 @@ class Company:
             removed = self.employees.pop(index)
             print(f"🗑 Удалён: {removed.name}")
         else:
-            print("❌ Ошибка индекса")
+            print("Ошибка индекса")
 
 
     def search(self, keyword):
@@ -151,7 +151,7 @@ class Storage:
                 data = json.load(f)
                 company.from_dict(data)
         except FileNotFoundError:
-            print("📂 Новая база сотрудников")
+            print("Новая база сотрудников")
 
 
 

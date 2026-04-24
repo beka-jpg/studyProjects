@@ -141,7 +141,7 @@ class Storage:
                 data = json.load(f)
                 system.from_dict(data)
         except FileNotFoundError:
-            print("📂 Новый склад")
+            print("Новый склад")
 
 
 def main():
@@ -193,7 +193,7 @@ def main():
             break
 
         else:
-            print("❌ Неверный выбор")
+            print("Неверный выбор")
 
 
 if __name__ == "__main__":

@@ -124,7 +124,7 @@ def main():
     Storage.load(manager)
 
     while True:
-        print("\n=== 📝 TO-DO LIST ===")
+        print("\n=== Список задач ===")
         print("1. Добавить задачу")
         print("2. Показать задачи")
         print("3. Выполнить задачу")
@@ -138,10 +138,10 @@ def main():
 
         if choice == "1":
             title = input("Название: ")
-            priority = input("Приоритет (HIGH/MEDIUM/LOW): ").upper()
+            priority = input("Приоритет (Высокий/Средний/Низкий): ").upper()
 
-            if priority not in ["HIGH", "MEDIUM", "LOW"]:
-                priority = "MEDIUM"
+            if priority not in ["Высокий", "Средний", "Низкий"]:
+                priority = "Средний"
 
             manager.add_task(Task(title, priority))
 
@@ -155,7 +155,7 @@ def main():
             title = input("Название: ")
             priority = input("Новый приоритет: ").upper()
 
-            if priority not in ["HIGH", "MEDIUM", "LOW"]:
+            if priority not in ["Высокий", "Средний", "Низкий"]:
                 print("Неверный приоритет")
             else:
                 manager.change_priority(title, priority)
