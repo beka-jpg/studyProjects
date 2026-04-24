@@ -62,7 +62,7 @@ class Company:
 
     def add_employee(self, employee):
         if self.find_by_id(employee.emp_id):
-            print("❌ Сотрудник с таким ID уже существует")
+            print("Сотрудник с таким ID уже существует")
             return
 
         if self.find_by_email(employee.email):
